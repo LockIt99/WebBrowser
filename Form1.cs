@@ -19,11 +19,6 @@ namespace WebBrowser
             InitializeComponent();
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             browser.GoBack();
@@ -56,7 +51,6 @@ namespace WebBrowser
         {
             browser.ScriptErrorsSuppressed = true;
             string appName =Process.GetCurrentProcess().ProcessName + ".exe";
-            //MessageBox.Show("Current process name is " + appName);
            SetIEkeyBrowserContrl(appName);
         }
 
@@ -75,7 +69,6 @@ namespace WebBrowser
                     return;
                 }
                 string key = regKey.GetValue(appName).ToString();
-               // MessageBox.Show($"Available Key for {appName}.{key}");
                 if (key == "8000")
                 {
                     MessageBox.Show("It's already there.");
@@ -86,11 +79,6 @@ namespace WebBrowser
                 {
                     regKey.SetValue(appName, unchecked((int)0x1F40),RegistryValueKind.DWord);
                 }
-                //key = regKey.GetValue(appName).ToString();
-                //if (key == "8000")
-                //    MessageBox.Show("Application Settings Applied Successfully");
-                //else
-                //    MessageBox.Show("Application Settings Failed, Ref: " + key);
             }
             catch (Exception ex)
             {

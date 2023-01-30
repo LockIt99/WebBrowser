@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.cbURL = new System.Windows.Forms.ToolStripComboBox();
-            this.browser = new System.Windows.Forms.WebBrowser();
+            this.btnBack = new System.Windows.Forms.ToolStripButton();
             this.btnForward = new System.Windows.Forms.ToolStripButton();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cbURL = new System.Windows.Forms.ToolStripComboBox();
             this.btnGo = new System.Windows.Forms.ToolStripButton();
-            this.btnBack = new System.Windows.Forms.ToolStripButton();
+            this.browser = new System.Windows.Forms.WebBrowser();
             this.cms1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,33 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btnBack
+            // 
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(76, 29);
+            this.btnBack.Text = "Back";
+            this.btnBack.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // btnForward
+            // 
+            this.btnForward.Image = ((System.Drawing.Image)(resources.GetObject("btnForward.Image")));
+            this.btnForward.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnForward.Name = "btnForward";
+            this.btnForward.Size = new System.Drawing.Size(105, 29);
+            this.btnForward.Text = "Forward";
+            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(94, 29);
+            this.btnReload.Text = "Reload";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -71,6 +98,15 @@
             this.cbURL.Size = new System.Drawing.Size(200, 34);
             this.cbURL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbURL_KeyDown);
             // 
+            // btnGo
+            // 
+            this.btnGo.Image = ((System.Drawing.Image)(resources.GetObject("btnGo.Image")));
+            this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(63, 29);
+            this.btnGo.Text = "Go";
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            // 
             // browser
             // 
             this.browser.ContextMenuStrip = this.cms1;
@@ -83,48 +119,11 @@
             this.browser.TabStop = false;
             this.browser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.browser_DocumentCompleted);
             // 
-            // btnForward
-            // 
-            this.btnForward.Image = global::WebBrowser.Properties.Resources.forward1;
-            this.btnForward.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnForward.Name = "btnForward";
-            this.btnForward.Size = new System.Drawing.Size(105, 29);
-            this.btnForward.Text = "Forward";
-            this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
-            // 
-            // btnReload
-            // 
-            this.btnReload.Image = global::WebBrowser.Properties.Resources.reload;
-            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(94, 29);
-            this.btnReload.Text = "Reload";
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
-            // btnGo
-            // 
-            this.btnGo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnGo.Image = global::WebBrowser.Properties.Resources.go;
-            this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGo.Name = "btnGo";
-            this.btnGo.Size = new System.Drawing.Size(34, 29);
-            this.btnGo.Text = "Go";
-            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Image = global::WebBrowser.Properties.Resources.back;
-            this.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(76, 29);
-            this.btnBack.Text = "Back";
-            this.btnBack.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // cms1
             // 
             this.cms1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.cms1.Name = "cms1";
-            this.cms1.Size = new System.Drawing.Size(241, 37);
+            this.cms1.Size = new System.Drawing.Size(61, 4);
             this.cms1.Text = "Kishore";
             // 
             // WinForm

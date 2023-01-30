@@ -84,9 +84,6 @@
     <None Include="Resources\forward.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\forward1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\reload.jpg" />
   </ItemGroup>
   <ItemGroup>
